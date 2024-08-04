@@ -14,6 +14,8 @@ public class Patient {
 		this.medicalHistory = medicalHistory;
 	}
 	public Patient(int patientID, String name) {}
+	public Patient() {}
+
 
 
 	public int getPatientID() {

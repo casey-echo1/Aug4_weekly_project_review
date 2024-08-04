@@ -15,6 +15,10 @@ public class Inpatient extends Patient {
 		this.admissionDate = admissionDate;
 		this.roomNumber = roomNumber;
 	}
+	public Inpatient(Patient patient, String admissionDate, String roomNumber) {
+		this.admissionDate = admissionDate;
+		this.roomNumber = roomNumber;
+	}
 
 
 	@Override
