@@ -1,6 +1,6 @@
 package org.example.bankingV1;
 
-public class Account {
+public class Account<T> {
 	// need to look further into purpose of "private" modifier here
 	private Integer accountNumber;
 	private double balance;
