@@ -19,7 +19,7 @@ public class Patient {
 	public String getPatientName() {
 		return patientName;
 	}
-	public List<String> getMedicalHistory() {
+	public List<MedicalRecord> getMedicalHistory() {
 		return medicalHistory;
 	}
 
