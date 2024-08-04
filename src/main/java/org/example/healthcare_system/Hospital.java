@@ -1,11 +1,12 @@
 package org.example.healthcare_system;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //declare generic intention + constraint in class declaration
 public class Hospital<T extends Patient> {
 	//T has already been constrained, so just use T for rest of class
-	private List<T> patients;
+	private List<T> patients = new ArrayList<>();
 
 	public Hospital() {}
 

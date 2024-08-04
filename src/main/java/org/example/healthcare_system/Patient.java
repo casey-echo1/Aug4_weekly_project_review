@@ -1,17 +1,20 @@
 package org.example.healthcare_system;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Patient {
 	private int patientID;
 	private String patientName;
-	private List<MedicalRecord> medicalHistory;
+	List<MedicalRecord> medicalHistory = new ArrayList<MedicalRecord>();
 
 	public Patient(int patientID, String name, List<MedicalRecord> medicalHistory) {
 		this.patientID = patientID;
 		this.patientName = name;
 		this.medicalHistory = medicalHistory;
 	}
+	public Patient(int patientID, String name) {}
+
 
 	public int getPatientID() {
 		return patientID;
