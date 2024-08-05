@@ -9,10 +9,13 @@ public class VendingMachine<T extends Product> {
 	public VendingMachine() {}
 
 	public void addProduct(String code, Slot<T> slot) {
+		if(slot == null) throw new IllegalArgumentException("You must choose a valid slot");
+		if(code == null || code.isEmpty()) throw new IllegalArgumentException("You must choose a valid code");
 		slots.put(code, slot);
 	}
 
 	public void dispenseProduct(String code) {
+		if(code == null || code.isEmpty()) throw new IllegalArgumentException("You must choose a valid code");
 		if(slots.containsKey(code)) {
 			Slot<? extends Product> slot = slots.get(code);
 			if(slot.getQuantity() > 0) {

@@ -6,6 +6,8 @@ public class Snack extends Product {
 	public Snack(String name, double price, boolean isVegan) {
 		super(name, price);
 		this.isVegan = isVegan;
+		if(name == null || name.isEmpty()) throw new IllegalArgumentException("Name cannot be null or empty");
+		if(price < 0) throw new IllegalArgumentException("Price cannot be negative");
 	}
 	public boolean getVeganStatus() {
 		return isVegan;

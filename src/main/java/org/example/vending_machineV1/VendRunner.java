@@ -15,5 +15,18 @@ public class VendRunner {
 		vend1.dispenseProduct("F4");
 		vend1.dispenseProduct("F4");
 
+		//empty name
+		//Snack snack2 = new Snack("", 5, true);
+		// negative price
+		//Beverage beverage2 = new Beverage("Coke", -2.00, 12);
+		//flOunces negative
+		//Beverage beverage3 = new Beverage("Coke", 1.00, -12);
+		//quantity is negative
+		//Slot slot4 = new Slot(snack1, -2);
+		// product is null
+		//Slot slot3 = new Slot(null, 3);
+		//code is empty or null
+		vend1.dispenseProduct(null);
+
 	}
 }

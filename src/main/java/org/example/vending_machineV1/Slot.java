@@ -5,6 +5,8 @@ public class Slot<T extends Product> {
 	private int quantity;
 
 	public Slot(T product, int quantity) {
+		if(product == null) throw new IllegalArgumentException("You must enter a valid product.");
+		if(quantity < 0) throw new IllegalArgumentException("Quantity can not be negative.");
 		this.product = product;
 		this.quantity = quantity;
 	}
@@ -12,6 +14,7 @@ public class Slot<T extends Product> {
 		if (quantity > 0) quantity--;
 	}
 	public T getProduct() {
+		if(product == null) throw new IllegalArgumentException("You must enter a valid product.");
 		return product;
 	}
 
@@ -24,6 +27,7 @@ public class Slot<T extends Product> {
 	}
 
 	public void setQuantity(int quantity) {
+		if(quantity < 0) throw new IllegalArgumentException("Quantity can not be negative.");
 		this.quantity = quantity;
 	}
 
